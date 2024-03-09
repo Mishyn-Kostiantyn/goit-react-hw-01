@@ -1,30 +1,30 @@
 import React from 'react'
-
-function Profile() {
+import css from './Profile.module.css';
+function Profile(user) {
   return (
-      <div>
-           <div>
-    <img
-      src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
+      <div className={css.userCard}>
+           <div className={css.userMainData}>
+    <img className={css.userPicture}
+      src={user.image}
       alt="User avatar"
     />
-    <p>Petra Marica</p>
-    <p>@pmarica</p>
-    <p>Salvador, Brasil</p>
+    <p className={css.userName}>{user.name}</p>
+    <p className={css.userData}>{user.tag}</p>
+        <p className={css.userData}>{user.location}</p>
   </div>
 
-  <ul>
-    <li>
-      <span>Followers</span>
-      <span>1000</span>
+  <ul className={css.userActivity}>
+    <li className={css.userActivityFeatures}>
+      <span >Followers</span>
+          <span className={css.userActivityFeaturesNumbers}>{user.stats.followers}</span>
     </li>
-    <li>
-      <span>Views</span>
-      <span>2000</span>
+    <li className={css.userActivityFeatures}>
+      <span >Views</span>
+      <span className={css.userActivityFeaturesNumbers}>{user.stats.views}</span>
     </li>
-    <li>
-      <span>Likes</span>
-      <span>3000</span>
+    <li className={css.userActivityFeatures}>
+      <span >Likes</span>
+      <span className={css.userActivityFeaturesNumbers}>{user.stats.likes}</span>
     </li>
   </ul>
     </div>

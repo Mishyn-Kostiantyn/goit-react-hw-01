@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+p {
+  margin: 0;
+}
+.friendCard {
+  width: 80px;
+  border: 2px solid blueviolet;
+  border-radius: 8px;
+  padding: 10px;
+}
+.friendName {
+  font-weight: 600;
+  font-size: 16px;
+}
+.friendOnline {
+  font-size: 12px;
+  font-weight: 500;
+  color: green;
+}
+.friendOnline.OffLine {
+  color: red;
+}

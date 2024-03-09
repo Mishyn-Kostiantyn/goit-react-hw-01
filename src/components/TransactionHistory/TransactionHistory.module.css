@@ -1,0 +1,30 @@
+.tableDeco {
+  width: 100%;
+  text-align: center;
+}
+td {
+  box-sizing: border-box;
+  width: 100px;
+}
+.tableHeader {
+  background-color: rgba(30, 30, 29, 0.915);
+  color: aliceblue;
+}
+.withdrawalClass {
+  background-color: rgba(181, 95, 95, 0.597);
+}
+.invoiceClass {
+  background-color: rgba(119, 154, 90, 0.555);
+}
+.paymentClass {
+  background-color: rgba(84, 84, 138, 0.467);
+}
+.depositClass {
+  background-color: rgba(96, 99, 6, 0.192);
+}
+.transactionType {
+  box-sizing: border-box;
+  text-transform: capitalize;
+  text-align: left;
+  padding-left: 35px;
+}

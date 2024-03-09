@@ -2,26 +2,35 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
+import Profile from './components/Profile/Profile';
+import userData from "./userData.json";
+import FriendList from './components/FriendsList/FriendsList';
+import friends from './friends.json';
+import transactions from './transactions.json'
+import TransactionHistory from './components/TransactionHistory/TransactionHistory';
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
     <>
       <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h2>Завдання №1</h2>
+      <Profile
+        name={userData.username}
+        tag={userData.tag}
+        location={userData.location}
+       image={userData.avatar}
+      stats={userData.stats}
+      />
+      <h2>Завдання №2</h2>
+      <FriendList
+        friends={friends}
+      />
+      <h2>Завдання №3</h2>
+      <TransactionHistory transactionsHistory={transactions}/>
     </>
   )
+  
 }
 
 export default App
